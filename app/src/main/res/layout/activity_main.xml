@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:folding-cell="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+
+    <Button
+        android:text="带"
+        android:onClick="dai"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:ignore="OnClick" />
+    <Button
+        android:onClick="budai"
+        android:text="不带"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:ignore="OnClick" />
+
+
+    <!--folding-cell:additionalFlipsCount="2"   额外的翻转次数-->
+    <com.as.demo_ok10.foldingcell.FoldingCell
+        android:clipChildren="false"
+        android:clipToPadding="false"
+
+
+        folding-cell:animationDuration="1300"
+        folding-cell:backSideColor="@color/bgBackSideColor"
+
+        android:layout_margin="20dp"
+        android:id="@+id/foldingcell"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:background="@android:color/holo_green_dark"
+            android:visibility="gone"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+
+                android:text="左青龙   "
+                android:textSize="30sp"
+                android:layout_width="wrap_content"
+                android:layout_height="300dp" />
+
+            <TextView
+                android:textSize="30sp"
+                android:text="    右白虎"
+                android:layout_width="wrap_content"
+                android:layout_height="300dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:background="@android:color/holo_blue_dark"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+
+                android:gravity="center"
+                android:text="前朱雀   "
+                android:textSize="30sp"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp" />
+
+            <TextView
+                android:gravity="center"
+                android:textSize="30sp"
+                android:text="    后玄武"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp" />
+
+        </LinearLayout>
+
+
+    </com.as.demo_ok10.foldingcell.FoldingCell>
+
+
+
+</LinearLayout>
